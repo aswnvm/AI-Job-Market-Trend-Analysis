@@ -22,9 +22,9 @@ This project explores hiring trends, skill demand, and regional job market shift
 - Job demand forecasting using ARIMA/Prophet
 - Role and skill-level segmentation
 
-## 🚀 Status
+<!-- ## 🚀 Status
 
-🛠️ In progress — Dashboard integration and forecasting module under development
+🛠️ In progress — Dashboard integration and forecasting module under development -->
 
 ## 📁 Deliverables
 
