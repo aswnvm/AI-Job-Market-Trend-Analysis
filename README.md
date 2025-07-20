@@ -1,5 +1,6 @@
-# 📊 Job Market Trend Analysis
+# 📊AI Job Market Trend Analysis
 
+Welcome to the **AI Job Market Trend Analysis** repository! 🚀  
 This project explores hiring trends, skill demand, and regional job market shifts using data from job postings. It leverages Python for data processing and modeling, with an interactive Shiny dashboard for real-time trend exploration.
 
 ## 🔍 Objectives
