@@ -1,19 +1,17 @@
 /*
 ===============================================================================
-DDL Script: Create Bronze Tables
+DDL Script: Create Silver Tables
 ===============================================================================
 Script Purpose:
-    This script creates tables in the 'bronze' schema, dropping existing tables 
+    This script creates tables in the 'silver' schema, dropping existing tables 
     if they already exist.
-	  Run this script to re-define the DDL structure of 'bronze' Tables
+	  Run this script to re-define the DDL structure of 'silver' Tables
 ===============================================================================
 */
+IF OBJECT_ID('silver.jobs_cleaned', 'U') IS NOT NULL
+	DROP TABLE silver.jobs_cleaned;
 
-if OBJECT_ID('bronze.jobs_raw', 'U') IS NOT NULL
-	DROP TABLE bronze.jobs_raw;
-GO
-
-CREATE TABLE bronze.jobs_raw (
+CREATE TABLE silver.jobs_cleaned(
 	job_id NVARCHAR(50),
 	job_title NVARCHAR(100),
 	salary_usd INT,
@@ -33,6 +31,5 @@ CREATE TABLE bronze.jobs_raw (
 	job_description_length INT,     
 	benefits_score DECIMAL(5, 2),  
 	company_name NVARCHAR(100),
+	dh_create_date DATETIME2 DEFAULT GETDATE()
 );
-
-GO
