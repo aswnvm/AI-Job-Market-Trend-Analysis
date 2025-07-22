@@ -16,6 +16,9 @@ Usage Example:
     EXEC bronze.load_bronze;
 ===============================================================================
 */
+EXEC bronze.load_bronze;
+GO
+
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 BEGIN
 	DECLARE @start_time DATETIME, @end_time DATETIME;
@@ -37,9 +40,8 @@ BEGIN
 		WITH (
 			FIRSTROW = 2,
 			FIELDTERMINATOR = ',',
-			TABLOCK
-			--ERRORFILE = 'D:\PROJECTS\Job-Market-Trend-Analysis\scripts\bronze\err.txt', 
-			--MAXERRORS = 10
+			TABLOCK,
+			FORMAT = 'CSV'
 		);
 
 		SET @end_time = GETDATE();

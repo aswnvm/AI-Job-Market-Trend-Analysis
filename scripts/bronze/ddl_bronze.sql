@@ -18,12 +18,12 @@ CREATE TABLE bronze.jobs_raw (
 	remote_ratio INT,
 	required_skills NVARCHAR(MAX), 
 	required_education NVARCHAR(50),
-	experience_years NVARCHAR(50),          
+	experience_years INT,          
 	industry NVARCHAR(50),
-	posting_date NVARCHAR(50),
-	application_deadline NVARCHAR(50),
-	job_description_length NVARCHAR(50),     
-	benefits_score NVARCHAR(50),  
+	posting_date DATE,
+	application_deadline DATE,
+	job_description_length INT,     
+	benefits_score DECIMAL(5, 2),  
 	company_name NVARCHAR(100),
 );
 
