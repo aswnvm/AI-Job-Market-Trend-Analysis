@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "kagglehub>=0.3.12",
+    "pandas>=2.3.1",
     "requests>=2.32.4",
 ]
  

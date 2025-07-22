@@ -1,0 +1,24 @@
+USE master;
+GO
+
+IF EXISTS ( SELECT 1 FROM sys.databases WHERE name = 'AiJobMarket')
+	BEGIN
+		ALTER DATABASE [AiJobMarket] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+		DROP DATABASE [AiJobMarket];
+	END;
+GO
+
+CREATE DATABASE AiJobMarket;
+GO
+
+USE AiJobMarket;
+GO
+
+CREATE SCHEMA bronze;
+GO
+
+CREATE SCHEMA silver;
+GO
+
+CREATE SCHEMA gold;
+GO
