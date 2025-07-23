@@ -31,5 +31,5 @@ CREATE TABLE silver.jobs_cleaned(
 	job_description_length INT,     
 	benefits_score DECIMAL(5, 2),  
 	company_name NVARCHAR(100),
-	dh_create_date DATETIME2 DEFAULT GETDATE()
+	dWh_create_date DATETIME2 DEFAULT GETDATE()
 );
